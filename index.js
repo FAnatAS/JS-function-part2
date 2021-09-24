@@ -1,11 +1,16 @@
-let num=10;
-console.log(num, typeof num);
+/*
+виды лжи
+false
+0 +0 -0
+'' //пустая строка
+NaN
+null
+undefined
 
-let str='ten';
-console.log(str, typeof str);
+все что не это - правда
+*/
+let condition=false;
 
-let varNull=null;
-console.log(varNull, typeof varNull);
-
-let varUndefined=undefined;
-console.log(varUndefined, typeof varUndefined);
+if(condition){
+  console.log(condition)
+}
