@@ -1,32 +1,11 @@
-//variable
-//let 
+let num=10;
+console.log(num, typeof num);
 
-/*
-имя переменной 
-начинается с буквы или _ или  $
-только слитно (без пробела)
-латиница
-можгут быть цифры в середние или в конце
-регистрозависимый
- camelCase
-  отвечает на вопрос "что в ней?"
-*/
+let str='ten';
+console.log(str, typeof str);
 
-//создание переменной
-let num;
-//инициализация
-num=33;
- //логирование
- console.log('num=', num);
- let num2=28;
- num=44;
- console.log('num=', num);
+let varNull=null;
+console.log(varNull, typeof varNull);
 
- const num3=77;
- //num3=55;
-
- {
-   let num3;
-   console.log('num2=', num2);
-   console.log('num3=', num3);
- }
+let varUndefined=undefined;
+console.log(varUndefined, typeof varUndefined);
