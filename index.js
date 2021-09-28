@@ -1,76 +1,13 @@
-/*
-виды лжи
-false
-0 +0 -0
-'' //пустая строка
-NaN
-null
-undefined
+let userInput = prompt ('Enter number: ');
+//string || null
 
-все что не это - правда
-*/
-let condition=false;
+//пустая строка
+//то, что нельзя привести к нулю
+//null
 
-if(condition){
-  console.log(condition)
+if (userInput==='' || userInput===null || isNaN(Number(userInput))){
+  console.log(error);
 }
-/*
-
-
-let number = 15;
-let min = 10;
-let max = 20;
-
-if(number<min || number>max){
-  console.log('You win', number)
+else{
+  console.log ('well done');
 }
-*/
-
-let firstNumber = 45;
-let secondNumber = 12;
-let sum;
-let division;
-let multply;
-let difference;
-sum=firstNumber+secondNumber;
-console.log(sum);
-
-division=firstNumber/secondNumber;
-console.log(division);
-
-multply=firstNumber*secondNumber;
-console.log(multply);
-
-difference=firstNumber-secondNumber;
-console.log(difference);
-
-
-let anyNumber = 101;
-let logicValue = true;
-let programmingLanguage='Java';
-let teslaFounder='Elon Musk';
-let nullValue=null;
-
-
-let number=23;
-number+=11;
-console.log(number);
-
-number/=2;
-console.log(number);
-
-number--;
-console.log(number);
-
-number*=11;
-console.log(number);
-
-number++;
-console.log(number);
-
-number%=5;
-console.log(number);
-
-
-
-
