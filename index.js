@@ -1,64 +1,55 @@
-// const getSumTwoNums = function(){
-//   let userInput1=prompt('enter 1st number');
-//   let userInput2=prompt('enter 2nd number');
+// const isEmptyMessage = function(){
 
-//   let checkEmpty = userInput1===''|| userInput1===null || userInput2==='' || userInput2===null;
-
-//   let sum=Number(userInput1)+Number(userInput2);
-//   if (isNaN(sum)) {
-//     console.log('error');
-//   }else{
-//     console.log(userInput1,'+',userInput2, '=', sum)
-//   }
-
+//   let message = prompt('enter message')
+//   const message1 = (message>'')? 'Thank you' : 'Enter message with symbols'
+//   console.log (message1);
 // }
 
-// getSumTwoNums();
+// isEmptyMessage ();
 
+// const isEmptyMessage = function(){
 
-
-let inputFirstValue=prompt('enter 1st value');
-let inputSecondValue=prompt('enter 2nd value');
-
-// const checkValue = function(val1, val2){
-//   if(typeof(inputFirstValue)===typeof(inputSecondValue))
-//   {
-//     if ( inputFirstValue===''|| inputFirstValue===null || inputSecondValue==='' || inputSecondValue===null){
-//   return error;
+//   const message1 = (prompt('enter message')>'')? 'Thank you' : 'Enter message with symbols'
+//   console.log (message1);
 // }
-// }
-// }
-/**
-//  * returns maximum of two values if they are the same type
-//  * @param {any} val1 
-//  * @param {any} val2 
-//  * @returns {any | null}
-//  */
 
-const maximumValue = function(val1, val2){
-  if(typeof val1 ===typeof val2 )
-  {if(val1>val2)
-  {
-  return val1 ;
-}else{
-return val2;
+// isEmptyMessage ();
+
+// const logDataInfo = function(){
+//   const data = prompt('Enter: '); //string '' null
+//   // if (data){
+//   //   console.log('Thanks')
+//   // }else{
+//   //   console.log('Enter any ')
+//   // }
+//   console.log(data?'Thanks, you entered: '+data:'Enter any')
+// }
+// logDataInfo();
+
+const monthNumber = prompt('Enter month number: ')
+
+switch (monthNumber) {
+  case '1':
+  case '2':
+  case '12':
+    console.log('winter')
+  break;
+  case '3':
+  case '4':
+  case '5':
+    console.log('spring')
+  break;
+  case '6':
+  case '7':
+  case '8':
+    console.log('summer')
+  break;
+  case '9':
+  case '10':
+  case '11':
+    console.log('autumn')
+  break;
+  default:
+    console.log('invalid data')
+  break;
 }
-  }
-  return null;
-}
-console.log(maximumValue(inputFirstValue, inputSecondValue))
-console.log(maximumValue(10,4))
-console.log(maximumValue(1099,4333))
-// let a = 5(4);
-
-// const isEven = function(a){
-// if(typeof a==='number'){
-//        return a%2===0;
-//        }
-//     return null
-//   }
- 
-
-//   console.log(isEven(12));
-//   console.log(isEven(13));
-//   console.log(isEven('qwe'));
