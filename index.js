@@ -128,18 +128,27 @@
 // //const userNumber2=prompt ('Enter 2st num')
 // //const userOperator=prompt ('Enter operator')
 
-const sum=function (a,b) {
-  return a+b
-}
-const sub=function (a,b) {
-  return a-b;
-}
-const mult=function (a,b) {
-  return a*b;
-}
-const div=function (a,b) {
-  return a/b;
-}
-const rem=function (a,b) {
-  return a%b;
+// const sum=function (a,b) {
+//   return a+b
+// }
+// const sub=function (a,b) {
+//   return a-b;
+// }
+// const mult=function (a,b) {
+//   return a*b;
+// }
+// const div=function (a,b) {
+//   return a/b;
+// }
+// const rem=function (a,b) {
+//   return a%b;
+// }
+
+
+while(true){
+  const password=prompt('Enter password: ');
+  if(password===GOOD_PASSWORD){
+    alert('Thanks');
+    break;
+  }
 }
