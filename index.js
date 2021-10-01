@@ -143,12 +143,63 @@
 // const rem=function (a,b) {
 //   return a%b;
 // }
+// debugger;
 
+// let effort = 0;
 
-while(true){
-  const password=prompt('Enter password: ');
-  if(password===GOOD_PASSWORD){
-    alert('Thanks');
-    break;
+// while(true){
+ 
+//   const password=prompt('Enter password: ');
+//   effort++;
+//   if(password===GOOD_PASSWORD){
+//     alert('Thanks');
+//     break;
+//   }
+  
+//   if(effort===MAX_COUNT_TRY){
+//     alert('Bed boy');
+//     break;
+//   }
+//   alert('Count try= ' + effort);
+// }
+
+// debugger;
+
+// let effort = FACTORIAL;
+// let count=0
+
+// while(true){
+
+//   if (count<FACTORIAL){
+
+//   }
+  
+//}
+
+// let num=1;
+// for(i=1; i<=FACTORIAL; i++){
+//   num*=i;
+//   console.log(num);
+
+// }
+
+const calcFactorial = function (number=2) {
+  if (number<0){
+    return null;
   }
+if(number===0 ||number===1){ //number<=1
+  return 1;
 }
+if(number>MAX_FACTORIAL){//max_factorial
+  return false;
+}
+let result=1n;
+for(let i=1; i<number;i++){
+  result*=BigInt(i);
+}
+return result;
+}
+
+console.log(calcFactorial(555))//BigInt
+console.log(calcFactorial(3))//6
+console.log(calcFactorial(4))//6
