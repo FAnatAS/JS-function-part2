@@ -555,3 +555,139 @@ const table={
     
 //     console.log(multyCount(queryNumber, table));
 //     }
+
+// const student1={
+//   id:1,
+//   firstName: 'Elon',
+//   lastName: 'Musk',
+//   age:50,
+//   isMale:true,
+//   toString: function(){
+//     return `${student1.firstname} ${student1.firstname}`;
+//   }
+//  };
+//  console.log(student1.toString())
+// const student2={
+//   id:2,
+//   firstName: 'Elon',
+//   lastName: 'Musk',
+//   age:50,
+//   isMale:true,
+// };
+// const student3={
+//   id:3,
+//   firstName: 'Elon',
+//   lastName: 'Musk',
+//   age:25,
+//   isMale:false,
+// };
+
+
+
+///// practice
+
+
+// const rabbit={
+//   color: 'red',
+//   jumping: function(){
+//     return 'i\'m jumping';
+//   },
+
+//  };
+ 
+//  const rabbitDomestic={
+//   petName: 'Rab',
+//   pet: function(){
+//   return `Pet me`;
+//   },
+// };
+//   rabbitDomestic.__proto__=rabbit;
+ 
+
+// const rabbitMagic={
+//   speak: function(){
+//     return `Speak to me, ${this.petName}`
+//   }
+//  };
+//  rabbitMagic.__proto__ = rabbitDomestic;
+
+ 
+
+///// practice
+
+// function LadderPrototype(){
+// this.up=function(){
+//   this.value++;
+//   return this;
+// };
+// this.down=function(){
+//   this.value--;
+//   return this;
+
+// };
+// this.showStep=function(){
+//   return this.value;
+  
+// };
+// }
+
+// function Ladder(){
+//   this.value=0;
+
+// }
+
+// Ladder.prototype=new LadderPrototype();
+// const Ladder1=new Ladder (0);
+
+// const step = Ladder1.up().up().down().up().up().down().showStep();
+// console.log(step);
+// // console.log(Ladder1.down());
+// // console.log(Ladder1.showStep());
+
+
+/////08/10/21
+
+// function saySomething(howSay, whatSay){
+//   howSay(whatSay);
+// }
+// saySomething(console.log, 'qwerty');
+
+// saySomething(alert, 'alert');
+// saySomething(prompt, 'prompt');
+// saySomething(confirm, 'confirm');
+
+/*
+в Ф. высшего пордяка передаются ИМЯ Ф (howSay), а не вызов Ф (howSay())
+*/
+
+//forEach()
+
+const nums = [1,2,3,4,5];
+
+function square (n){
+  //console.log(n*n);
+  return n*n;
+}
+for (let i=0;i<nums.length; i++)
+{
+  console.log(square(nums[i]));
+}
+
+nums.forEach(square);
+
+
+//  const users=[{},{},{}];
+//  function addSubscribe (user){
+//   user.isSubscribed=true;
+// }
+
+// users.forEach(addSubscribe);
+
+
+
+
+function isEven(n){
+  return n%2===0;
+}
+
+myArray.some(isEven);
