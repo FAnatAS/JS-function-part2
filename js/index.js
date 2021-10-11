@@ -75,9 +75,20 @@
 // console.log(sum(...arrNums1)); //spread
 // console.log(sum2(...arrNums1));
 
-const arrNums1=[4,1,3,6];
-const arrNums1=[2,5,7,9];
+// const arrNums1=[4,1,3,6];
+// const arrNums1=[2,5,7,9];
 
-const arr3=[...arrNums1, 101, 256, ...arrNums2];//spread для объединения массивов
-console.log(arr3);
+// const arr3=[...arrNums1, 101, 256, ...arrNums2];//spread для объединения массивов
+// console.log(arr3);
 
+'use strict'
+
+function recursion(num){
+  if(num===0){
+    return;
+  }
+  console.log(num)
+  recursion(num-1);
+}
+
+recursion(8);
