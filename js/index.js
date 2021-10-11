@@ -662,18 +662,18 @@ const table={
 
 //forEach()
 
-const nums = [1,2,3,4,5];
+// const nums = [1,2,3,4,5];
 
-function square (n){
-  //console.log(n*n);
-  return n*n;
-}
-for (let i=0;i<nums.length; i++)
-{
-  console.log(square(nums[i]));
-}
+// function square (n){
+//   //console.log(n*n);
+//   return n*n;
+// }
+// for (let i=0;i<nums.length; i++)
+// {
+//   console.log(square(nums[i]));
+// }
 
-nums.forEach(square);
+// nums.forEach(square);
 
 
 //  const users=[{},{},{}];
@@ -686,8 +686,81 @@ nums.forEach(square);
 
 
 
-function isEven(n){
-  return n%2===0;
+// function isEven(n){
+//   return n%2===0;
+// }
+
+// myArray.some(isEven);
+
+
+
+
+function User (firstName, lastName, age, isMale, email, isSubscribed=false){
+  this.firstName=firstName;
+  this.lastName=lastName;
+  this.age=age;
+  this.isMale=isMale;
+  this.email=email;
+  this.isSubscribed=isSubscribed;
 }
 
-myArray.some(isEven);
+function UserPrototype(){
+  this.fullName=function(){
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+User.prototype = new UserPrototype();
+
+function createRandomUsers(amount=1){
+  const db=[];
+  for(let i=0;i<amount;i++){
+    const user = new User(
+      `Name${i}`,
+      `LName${i}`,
+      Math.ceil(Math.random()*60+20),//20-80 dif+start
+      Math.random()>0.5,//true||false
+      `email${i}@gmail.com`
+    );
+    db.push(user);
+  }
+
+  return db;
+}
+
+const users=createRandomUsers(100);
+
+//isSubscribed
+
+users.forEach(function(user){
+  user.isSubscribed = (Math.random()>0.5);
+})
+console.table(users);
+
+const fullNameUsers=users.map(function(user){
+  return user.fullName()
+});
+console.table(fullNameUsers);
+
+////retiree
+
+const retiree=users.filter(function(user){
+if (user.age>OLD_AGE){
+  return user.fullName()
+}
+});
+console.table(retiree);
+
+///// 2nd sposob
+// function isOldPeople(user){
+//   return user.age>=OLD_AGE;
+// }
+// const oldUsers=users.filter(isOldPeople);
+// console.table(oldUsers);
+
+const female40Subscribed =users.filter(function(user){
+  if (user.age<40 && user.isSubscribed && user.isMale===false){
+    return user.fullName()
+  }
+  });
+  console.table(female40Subscribed);

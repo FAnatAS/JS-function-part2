@@ -116,11 +116,25 @@ function MyArrayProto() {
     }
     return true;
   }
+  this.filter=function(func){
+    const result=new MyArray();
+    for(let i=0; i<this.length;i++){
+      if(func(this[i])){
+      result.push(this[i]);
+      }
+    }
+  return result;
+}
 }
 
 function isOdd(n){
   return n%2===1;
 }
+function isEven(n){
+  return n%2===0;
+}
+
+
 
 /*prototype*/
 MyArray.prototype=new MyArrayProto();
@@ -128,9 +142,9 @@ MyArray.prototype=new MyArrayProto();
 //   return 'new method';
 // };
 
-const myArray = new MyArray(1,1,1,15,5);
-myArray.push(2,2,2);
-myArray.pop();
+const myArray = new MyArray(1,4,7,14,5);
+// myArray.push(2,2,2);
+// myArray.pop();
 //myArray.forEach(square);
-console.log(myArray.every(isOdd));
-console.log(myArray.some(isEven));
+// console.log(myArray.some(isEven));
+console.log(myArray.filter(isEven));
