@@ -83,12 +83,30 @@
 
 'use strict'
 
-function recursion(num){
-  if(num===0){
-    return;
-  }
-  console.log(num)
-  recursion(num-1);
-}
+// function recursion(num){
+//   if(num===0){
+//     return;
+//   }
+//   console.log(num)
+//   recursion(num-1);
+// }
 
-recursion(8);
+// recursion(8);
+
+// const power=(num, exp)=>{
+//   if(exp===1){
+//     return num;
+//   }
+//   return num * power(num, exp-1);
+
+// }
+// power (2,3)
+
+const factorial=(num)=>{
+  if(num===0){
+    return 1;
+  }
+  return num * factorial(num-1);
+
+}
+factorial (4);
