@@ -52,17 +52,32 @@
 // t1(1,2,3,4);
 // t2(22,4,8,5);
 
-const sum = (...args)=>{
-  let result=null;
+// const sum = (...args)=>{
+//   let result=null;
 
-  // for(let i=0; i<args.length;i++){
-  //   result+=args[i];
-  // }
-  args.forEach((n)=>{
-    result+=n;
-  })
+//   // for(let i=0; i<args.length;i++){
+//   //   result+=args[i];
+//   // }
+//   args.forEach((n)=>{
+//     result+=n;
+//   })
 
-  return result;
-}
+//   return result;
+// }
 
-const sum2=(...args)=>args.reduce((result, n)=>result+n);
+// const sum2=(...args)=>args.reduce((result, n)=>result+n);//... rest
+
+
+
+// const arrNums1=[4,1,3,6];
+// //console.log(sum(arrNums1[0], arrNums1[1]));
+
+// console.log(sum(...arrNums1)); //spread
+// console.log(sum2(...arrNums1));
+
+const arrNums1=[4,1,3,6];
+const arrNums1=[2,5,7,9];
+
+const arr3=[...arrNums1, 101, 256, ...arrNums2];//spread для объединения массивов
+console.log(arr3);
+
