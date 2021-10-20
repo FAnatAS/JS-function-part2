@@ -102,11 +102,96 @@
 // }
 // power (2,3)
 
-const factorial=(num)=>{
-  if(num===0){
-    return 1;
-  }
-  return num * factorial(num-1);
+// const factorial=(num)=>{
+//   if(num===0){
+//     return 1;
+//   }
+//   return num * factorial(num-1);
 
+// }
+// factorial (4);
+
+// const greater =(num1, num2)=>{ //num1>num2 ? num1 : num2
+// if (num1>num2){
+// return num1;
+// }
+// return num2;
+// };
+// greater(2,5);
+
+// const str = 'tO BE or Not To bE'
+
+// function camelCase (str) {
+//   let newStr=str.toLowerCase();
+
+//   const arrWords = newStr.split(' ');
+//   const arrWordUp=arrWords.map((word)=>{
+//     const letter=word[0].toUpperCase() + word.subString(1);
+//   });
+//   newStr=arrWordsUp.join(' ')
+//   return newStr;
+
+// }
+
+// console.log(camelCase(str))
+
+
+// function camelCase (str) {
+//   return str.split(' ')
+//             .map((word)=>{
+//               return word[0].toUpperCase() + word.subString(1).toLowerCase();
+//             })
+//             .join(' ')
+// }
+
+
+// const arr =[1,3,4,5,6,7,8,2,3,3,];
+
+// console.log(arr[4])
+// //константная сложность 0(1)
+
+// //линейная сложность
+// const linearSearch = (arr,key)=>{
+//   for (let i = 0; i < arr.length; i++) {
+//     if(arr[i]===key){
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+
+//квадратичная сложность 0(n:2)
+
+// const createTableMult=(limit)=>{
+//   const table=[];
+//   for(let i=1; i<=limit; i++){
+//     for(let j=1; j<=limit; j++){
+//       table.push(`${i}*${j}=${i*j}`);
+//     }
+//   }
+//   return table;
+// }
+// console.log(createTableMult(9));
+
+//логарифмическая сложность 0(logn)
+
+const sortedArr = [1,3,5,8,9,12,15,19,40];
+
+const binarySearch = (arr, key)=>{
+  let start = 0;
+  let end =arr.length-1;
+  let middle;//index
+  while(start<=end){
+    middle=Math.round((start+end)/2);
+    if (arr[middle]===key){
+      return middle;
+    }
+    if(arr[middle]<key){
+      start=middle+1;
+    }else{
+      end=middle-1;
+    }
+  }
+  return -1;
 }
-factorial (4);
+console.log(binarySearch(sortedArr, 40));
