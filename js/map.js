@@ -33,18 +33,35 @@ dictionary.set('говорить','talk');
 
 const str = 'Город утка смотреть дочь дорога брать сестра кот'.toLowerCase;
 
-const translate =()=>{
-  const lowerCaseStr = str.toLowerCase();
-  const wordsArray = lowerCaseStr.split(' ');
-  const wordsTranslatedArray = wordsArray.map((word)=>{
-    if(dictionary.has(word)){
-      return dictionary.get(word);
-    }
-    return word;
+// const translate =()=>{
+//   const lowerCaseStr = str.toLowerCase();
+//   const wordsArray = lowerCaseStr.split(' ');
+//   const wordsTranslatedArray = wordsArray.map((word)=>{
+//     if(dictionary.has(word)){
+//       return dictionary.get(word);
+//     }
+//     return word;
     
-  });
-  const translatedStr = wordsTranslatedArray.join(' ');
-  return translatedStr;
-}
+//   });
+//   const translatedStr = wordsTranslatedArray.join(' ');
+//   return translatedStr;
+// }
 
-console.log(translate(str))
+const translate =(dictionary, str, separator = ' ')=>{
+  return str.toLowerCase()
+            .split(separator)
+            .map((word)=> (dictionary.has(word) ? dictionary.get(word) : word))
+            .join(separator);
+}
+// console.log(translate(dictionary, str))
+
+//const iteratorKeys = dictionary.keys();
+const keysArray = [... dictionary.keys()];
+//for (const iterator of dictionary.keys()) {
+//  keysArray.push(iterator)
+//}
+//так же и с Values
+const iteratorValues = dictionary.values();
+for (const iterator of iteratorValues) {
+  console.log(iterator)
+}
