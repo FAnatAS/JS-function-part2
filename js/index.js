@@ -1,4 +1,4 @@
-// 'use strict'
+ 'use strict'
 
 // // //declaration
 // // function test1(){
@@ -81,7 +81,7 @@
 // const arr3=[...arrNums1, 101, 256, ...arrNums2];//spread для объединения массивов
 // console.log(arr3);
 
-'use strict'
+//'use strict'
 
 // function recursion(num){
 //   if(num===0){
@@ -195,3 +195,87 @@
 //   return -1;
 // }
 // console.log(binarySearch(sortedArr, 40));
+
+
+//деструктуризация - способ создания переменной
+
+// const getFullName=(user)=>{
+//   return `${user.privateInfo.name} ${user.privateInfo.sname}`
+// }
+
+const getFullName=({privateInfo:{name, sname}})=>{
+  return `${name} ${sname}`;
+}
+
+const user = {
+  privateInfo:{
+    id:123,
+    name: 'Elon',
+    sname: 'Musk',
+    bday:{
+      day:28,
+      month:6,
+      year: 1971,
+    },
+  },
+  contactInfo:{
+    phone:'123-23-23',
+    address:{
+      town:'ZP',
+      street:'Sobornii',
+      house:211,
+    },
+    mail:'elon@gmail.com',
+  },
+  profession:'director',
+}
+// const{
+//   privateInfo:
+//   {
+//     name:userName,
+//     sname:userSname,
+//   },
+//   contactInfo:{
+//     phone
+//   }
+// }=user;
+// const {contactInfo:{
+//   mail:email
+// }
+// }=user;
+// console.log(email);
+const {
+  contactInfo:{
+    address:{
+      house:home
+    },
+    mail:email
+  }
+}=user;
+console.log(home);
+console.log(email);
+
+
+// console.log(userName);
+// console.log(userSname);
+// console.log(phone);
+
+
+// const dayBday=user.privateInfo.bday.day;
+// console.log(dayBday);
+
+// const{profession:profUser}=user;
+// //const{property:variable}=object;
+// console.log(profUser);
+
+//const{profession:profession}=user;
+//const{profession}=user;
+
+console.log(getFullName(user));
+
+
+const nums=[1,2,3,4,5];
+
+//const[one,,,four]= nums;
+
+const[one,...rest] = nums;
