@@ -203,57 +203,57 @@
 //   return `${user.privateInfo.name} ${user.privateInfo.sname}`
 // }
 
-const getFullName=({privateInfo:{name, sname}})=>{
-  return `${name} ${sname}`;
-}
+// const getFullName=({privateInfo:{name, sname}})=>{
+//   return `${name} ${sname}`;
+// }
 
-const user = {
-  privateInfo:{
-    id:123,
-    name: 'Elon',
-    sname: 'Musk',
-    bday:{
-      day:28,
-      month:6,
-      year: 1971,
-    },
-  },
-  contactInfo:{
-    phone:'123-23-23',
-    address:{
-      town:'ZP',
-      street:'Sobornii',
-      house:211,
-    },
-    mail:'elon@gmail.com',
-  },
-  profession:'director',
-}
-// const{
-//   privateInfo:
-//   {
-//     name:userName,
-//     sname:userSname,
+// const user = {
+//   privateInfo:{
+//     id:123,
+//     name: 'Elon',
+//     sname: 'Musk',
+//     bday:{
+//       day:28,
+//       month:6,
+//       year: 1971,
+//     },
 //   },
 //   contactInfo:{
-//     phone
+//     phone:'123-23-23',
+//     address:{
+//       town:'ZP',
+//       street:'Sobornii',
+//       house:211,
+//     },
+//     mail:'elon@gmail.com',
+//   },
+//   profession:'director',
+// }
+// // const{
+// //   privateInfo:
+// //   {
+// //     name:userName,
+// //     sname:userSname,
+// //   },
+// //   contactInfo:{
+// //     phone
+// //   }
+// // }=user;
+// // const {contactInfo:{
+// //   mail:email
+// // }
+// // }=user;
+// // console.log(email);
+// const {
+//   contactInfo:{
+//     address:{
+//       house:home
+//     },
+//     mail:email
 //   }
 // }=user;
-// const {contactInfo:{
-//   mail:email
-// }
-// }=user;
+// console.log(home);
 // console.log(email);
-const {
-  contactInfo:{
-    address:{
-      house:home
-    },
-    mail:email
-  }
-}=user;
-console.log(home);
-console.log(email);
 
 
 // console.log(userName);
@@ -271,11 +271,40 @@ console.log(email);
 //const{profession:profession}=user;
 //const{profession}=user;
 
-console.log(getFullName(user));
+// console.log(getFullName(user));
 
 
-const nums=[1,2,3,4,5];
+// const nums=[1,2,3,4,5];
 
-//const[one,,,four]= nums;
+// //const[one,,,four]= nums;
 
-const[one,...rest] = nums;
+// const[one,...rest] = nums;
+
+///////////-------25.10.2021-------/////////
+
+
+// const user1={
+//   id:1,
+//   name:'Elon',
+//   age:50
+// }
+// const user2={
+//   id:2,
+//   name:'Elen',
+//   age:20
+// }
+
+// const msgElon = ['12', 'hi!', 'bye!'];
+// const msgElen = ['Qwerty', 'hello', 'Add!'];
+
+// const msgUsers = new Map();
+// msgUsers.set(user1.id, msgElon);
+// msgUsers.set(user2.id, msgElen);
+
+// const getUserMessages = ({id})=>{
+//   msgUsers.get(id).forEach(msg=>console.log(msg));
+// }
+
+// getUserMessages(user1);
+
+
